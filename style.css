@@ -43,6 +43,43 @@ body {
     font-size: 4rem;
 }
 
+.quote-author {
+    margin-top: 10px;
+    font-size: 2rem;
+    font-weight: 400;
+    font-style: italic;
+    color: rgb(224, 82, 26);
+}
+.button-container {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+button {
+    cursor: pointer;
+    font-size: 1.2rem;
+    height: 2.5rem;
+    border: none;
+    border-radius: 10px;
+    color: antiquewhite;
+    background: rgb(13, 48, 22);
+    outline: none;
+    padding: 0.5rem 1.8rem;
+    box-shadow: 0 0.3rem  rgb(60, 136, 79);
+
+}
+.twitter-button {
+    color: rgb(36, 175, 240);
+}
+/* .instagram-button {
+    background: -webkit-linear-gradient(rgb(241, 31, 171), rgb(241, 122, 23));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+} */
+.instagram-button {
+    color: #ee08b4;
+}
 /* Media query : smaller devices */
 @media screen and (max-width: 1000px){
     .quote-container {
@@ -52,12 +89,4 @@ body {
     .quote-text {
         font-size: 2.5rem;
     }
-}
-
-.quote-author {
-    margin-top: 10px;
-    font-size: 2rem;
-    font-weight: 400;
-    font-style: italic;
-    color: rgb(224, 82, 26);
 }
