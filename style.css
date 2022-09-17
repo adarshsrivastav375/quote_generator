@@ -65,21 +65,49 @@ button {
     background: rgb(13, 48, 22);
     outline: none;
     padding: 0.5rem 1.8rem;
-    box-shadow: 0 0.3rem  rgb(60, 136, 79);
+    box-shadow: 0 0.3rem  rgba(60, 136, 79, 0.65);
 
 }
-.twitter-button {
-    color: rgb(36, 175, 240);
+button:hover {
+    filter: brightness(130%);
 }
+button:active {
+    transform: translate(0, 0.3rem);
+    box-shadow: 0 0.1rem rgba(13, 48, 22, .65);
+}
+
+.twitter-button:hover {
+    color: #38a1f3;
+}
+.instagram-button:hover {
+   color: #eb16ce;
+
+}
+
+.fa-twitter .fa-instagram {
+    font-size: 1.5rem;
+}
+.copy-button {
+    color: antiquewhite;
+}
+
+
+
+
+
+
+
+
+
+
+
 /* .instagram-button {
     background: -webkit-linear-gradient(rgb(241, 31, 171), rgb(241, 122, 23));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
 } */
-.instagram-button {
-    color: #ee08b4;
-}
+
 /* Media query : smaller devices */
 @media screen and (max-width: 1000px){
     .quote-container {
