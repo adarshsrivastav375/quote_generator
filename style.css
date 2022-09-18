@@ -89,24 +89,60 @@ button:active {
 }
 .copy-button {
     color: antiquewhite;
+    max-width: fit-content;
 }
 
+/* loader */
+ .loader {
+    width: 48px;
+    height: 48px;
+    position: relative;
+  }
+  .loader::after,
+  .loader::before {
+    content: '';  
+    box-sizing: border-box;
+    width: 48px;
+    height: 48px;
+    border: 2px solid #FFF;
+    position: absolute;
+    left: 0;
+    top: 0;
+    animation: rotationBreak 3s ease-in-out infinite alternate;
+  } 
+   .loader::after {
+    border-color: rgb(13, 48, 22);
+    animation-direction: alternate-reverse;
+  }
+  
+  @keyframes rotationBreak {
+    0% {
+      transform: rotate(0);
+    }
+    25% {
+      transform: rotate(90deg);
+    }
+    50% {
+      transform: rotate(180deg);
+    }
+    75% {
+      transform: rotate(270deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
 
-
-
-
-
-
-
-
-
-
-/* .instagram-button {
-    background: -webkit-linear-gradient(rgb(241, 31, 171), rgb(241, 122, 23));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-
-} */
 
 /* Media query : smaller devices */
 @media screen and (max-width: 1000px){
@@ -116,5 +152,40 @@ button:active {
     
     .quote-text {
         font-size: 2.5rem;
+    }
+}
+@media screen and (max-width: 620px){
+    .quote-text {
+        font-size: 1.5rem;
+    }
+    .new-quote {
+        width: 100px;
+        font-size: 0.9rem;
+
+    }
+    .button-container {
+        margin-top: 15px;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content:center;
+        align-items: center;
+        
+    }
+    .social {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px;
+        
+
+
+    }
+    .copy-button {
+       margin: 8px;
+    }
+
+    button {
+        margin: 2px;
     }
 }
