@@ -5,7 +5,9 @@ const twitterBtn = document.getElementById('twitter');
 const instagramBtn = document.getElementById('instagram');
 const newQuoteBtn = document.getElementById('new-quote');
 const loader = document.getElementById('loader');
-// const copyBtn = document.getElementById('copy-quote')
+const copyBtn = document.getElementById('copy-quote')
+let newqote  = "";
+let author= "";
 
 
 let apiQuotes = [];
@@ -44,6 +46,9 @@ function newQuote() {
     }
     // set quote hide loader
     quoteText.textContent = quote.text;
+    newqote = quote.text;
+    author = quote.author;
+  
     complete();
 
 }
@@ -72,18 +77,20 @@ function quoteOnInsta(){
     window.open(instagramUrl,'_blank');
 }
 
-// function copyText() {
-      
-//     /* Copy text into clipboard */
-//     navigator.clipboard.writeText
-//         (quoteText.textContent);
-// }
+function copyText() {
+    let str = newqote + " " + "\n" +author  
+    /* Copy text into clipboard */
+    navigator.clipboard.writeText
+        (str);
+        alert("text copied");
+    }
+
 
 // event listener
 newQuoteBtn.addEventListener('click',newQuote);
 twitterBtn.addEventListener('click', tweetQuote);
 instagramBtn.addEventListener('click', quoteOnInsta);
-//  copyBtn.addEventListener('click',copyQuote);
+copyBtn.addEventListener('click',copyText);
 
 //onload
 getquotes();  
