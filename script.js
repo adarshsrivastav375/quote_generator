@@ -78,10 +78,9 @@ function quoteOnInsta(){
 }
 
 function copyText() {
-    let str = newqote + " " + "\n" +author  
+    let str = newqote + " " + "\n" + "-" + author;
     /* Copy text into clipboard */
-    navigator.clipboard.writeText
-        (str);
+    navigator.clipboard.writeText(str);
         alert("text copied");
     }
 
